@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HAQ INTERIO | Premium Interior Designer</title>
+<meta name="description" content="HAQ INTERIO creates premium modern interiors with elegant aesthetics, professional execution, and affordable luxury interior solutions in Nashik.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+:root{
+--primary:#b68a5b;
+--secondary:#f5f1eb;
+--dark:#121212;
+--text:#2b2b2b;
+--gray:#666666;
+--white:#ffffff;
+--gradient:linear-gradient(135deg,#b68a5b,#e0c39d);
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#faf8f5;
+color:var(--text);
+overflow-x:hidden;
+}
+
+body::-webkit-scrollbar{
+width:8px;
+}
+
+body::-webkit-scrollbar-thumb{
+background:var(--gradient);
+border-radius:20px;
+}
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:22px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,0.88);
+backdrop-filter:blur(14px);
+z-index:1000;
+border-bottom:1px solid rgba(0,0,0,0.06);
+}
+
+.logo{
+font-family:'Cinzel',serif;
+font-size:1.9rem;
+font-weight:700;
+letter-spacing:1px;
+}
+
+.logo span{
+color:var(--primary);
+}
+
+.nav-links{
+display:flex;
+gap:35px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--text);
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:var(--primary);
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:140px 8% 100px;
+background:
+linear-gradient(rgba(255,255,255,0.72),rgba(255,255,255,0.78)),
+url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:760px;
+}
+
+.hero-tag{
+display:inline-block;
+padding:12px 22px;
+border-radius:50px;
+background:rgba(255,255,255,0.88);
+border:1px solid rgba(0,0,0,0.06);
+margin-bottom:25px;
+font-size:0.9rem;
+backdrop-filter:blur(12px);
+}
+
+.hero h1{
+font-family:'Cinzel',serif;
+font-size:5rem;
+line-height:1.08;
+margin-bottom:25px;
+color:#111;
+}
+
+.hero h1 span{
+color:var(--primary);
+}
+
+.hero p{
+font-size:1.05rem;
+line-height:1.9;
+color:#555;
+margin-bottom:40px;
+max-width:680px;
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 34px;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+transition:0.4s;
+display:inline-block;
+}
+
+.btn-primary{
+background:var(--gradient);
+color:white;
+box-shadow:0 15px 35px rgba(182,138,91,0.25);
+}
+
+.btn-primary:hover{
+transform:translateY(-5px);
+}
+
+.btn-outline{
+background:white;
+border:1px solid rgba(0,0,0,0.1);
+color:var(--text);
+}
+
+.btn-outline:hover{
+background:#111;
+color:white;
+}
+
+.hero-cards{
+display:flex;
+gap:20px;
+margin-top:50px;
+flex-wrap:wrap;
+}
+
+.hero-card{
+background:rgba(255,255,255,0.84);
+padding:22px 28px;
+border-radius:24px;
+border:1px solid rgba(0,0,0,0.06);
+box-shadow:0 12px 35px rgba(0,0,0,0.05);
+min-width:190px;
+}
+
+.hero-card h3{
+color:var(--primary);
+margin-bottom:8px;
+font-size:1.3rem;
+}
+
+section{
+padding:110px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:70px;
+}
+
+.section-title h2{
+font-family:'Cinzel',serif;
+font-size:3.1rem;
+margin-bottom:15px;
+}
+
+.section-title h2 span{
+color:var(--primary);
+}
+
+.section-title p{
+max-width:760px;
+margin:auto;
+line-height:1.9;
+color:#666;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:60px;
+align-items:center;
+}
+
+.about-image img{
+width:100%;
+border-radius:30px;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+.about-content h3{
+font-family:'Cinzel',serif;
+font-size:2.5rem;
+margin-bottom:25px;
+}
+
+.about-content p{
+line-height:1.9;
+margin-bottom:20px;
+color:#555;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.service-card{
+background:white;
+padding:38px 32px;
+border-radius:28px;
+box-shadow:0 15px 40px rgba(0,0,0,0.05);
+transition:0.4s;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+}
+
+.service-card h3{
+margin:18px 0 15px;
+font-size:1.35rem;
+}
+
+.service-card p{
+line-height:1.8;
+color:#666;
+}
+
+.portfolio-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.portfolio-card{
+position:relative;
+height:430px;
+overflow:hidden;
+border-radius:30px;
+}
+
+.portfolio-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.5s;
+}
+
+.portfolio-card:hover img{
+transform:scale(1.08);
+}
+
+.portfolio-overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(180deg,transparent,rgba(0,0,0,0.82));
+padding:30px;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+color:white;
+}
+
+.portfolio-overlay h3{
+font-size:1.6rem;
+margin-bottom:10px;
+}
+
+.portfolio-overlay p{
+line-height:1.8;
+color:#ddd;
+}
+
+.review-section{
+background:#f3ede6;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.review-card{
+background:white;
+padding:35px;
+border-radius:30px;
+box-shadow:0 15px 40px rgba(0,0,0,0.05);
+}
+
+.stars{
+color:#FFD700;
+margin-bottom:18px;
+font-size:1.2rem;
+}
+
+.review-card p{
+line-height:1.9;
+color:#555;
+}
+
+.review-card h4{
+margin-top:22px;
+color:var(--primary);
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
+align-items:center;
+}
+
+.contact-card{
+background:white;
+padding:40px;
+border-radius:30px;
+box-shadow:0 15px 40px rgba(0,0,0,0.05);
+}
+
+.contact-card h3{
+font-family:'Cinzel',serif;
+font-size:2.1rem;
+margin-bottom:20px;
+}
+
+.contact-card p{
+line-height:1.9;
+margin-bottom:15px;
+color:#555;
+}
+
+.contact-form form{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:16px 18px;
+border-radius:14px;
+border:1px solid rgba(0,0,0,0.08);
+background:#fafafa;
+font-family:inherit;
+outline:none;
+}
+
+.contact-form textarea{
+height:160px;
+resize:none;
+}
+
+.cta{
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.58)),
+url('https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+padding:100px 8%;
+border-radius:35px;
+color:white;
+}
+
+.cta h2{
+font-family:'Cinzel',serif;
+font-size:3.1rem;
+margin-bottom:20px;
+}
+
+.cta p{
+max-width:720px;
+margin:auto;
+line-height:1.9;
+color:#ddd;
+margin-bottom:35px;
+}
+
+footer{
+padding:40px 8%;
+text-align:center;
+background:white;
+border-top:1px solid rgba(0,0,0,0.06);
+}
+
+footer p{
+color:#666;
+}
+
+.whatsapp{
+position:fixed;
+right:25px;
+bottom:25px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:2rem;
+text-decoration:none;
+color:white;
+z-index:1000;
+box-shadow:0 20px 35px rgba(0,0,0,0.18);
+}
+
+@media(max-width:900px){
+.nav-links{
+display:none;
+}
+
+.hero{
+padding:130px 5% 90px;
+text-align:center;
+}
+
+.hero h1{
+font-size:3.4rem;
+}
+
+.hero-buttons,
+.hero-cards{
+justify-content:center;
+}
+
+section{
+padding:90px 5%;
+}
+
+.section-title h2,
+.cta h2{
+font-size:2.5rem;
+}
+}
+
+@media(max-width:600px){
+.hero h1{
+font-size:2.6rem;
+}
+
+.hero p{
+font-size:0.95rem;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.btn{
+width:100%;
+text-align:center;
+}
+
+.hero-cards{
+flex-direction:column;
+}
+
+.hero-card{
+width:100%;
+}
+
+.service-card,
+.review-card,
+.contact-card{
+padding:28px 24px;
+}
+
+.portfolio-card{
+height:320px;
+}
+
+.cta{
+padding:70px 6%;
+}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="logo">HAQ <span>INTERIO</span></div>
+
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+<div class="hero-tag">Premium Interior Designer • Nashik</div>
+
+<h1>Crafting <span>Elegant Interiors</span> With Modern Luxury.</h1>
+
+<p>
+HAQ INTERIO creates stylish, functional, and premium interior spaces with modern aesthetics, smooth execution, and affordable luxury design solutions tailored to every client.
+</p>
+
+<div class="hero-buttons">
+<a href="#portfolio" class="btn btn-primary">View Projects</a>
+<a href="#contact" class="btn btn-outline">Book Consultation</a>
+</div>
+
+<div class="hero-cards">
+<div class="hero-card">
+<h3>4.8 Rating</h3>
+<p>Trusted Interior Studio</p>
+</div>
+
+<div class="hero-card">
+<h3>Affordable Luxury</h3>
+<p>EMI Interior Solutions</p>
+</div>
+
+<div class="hero-card">
+<h3>On-Time Delivery</h3>
+<p>Professional Execution</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="section-title">
+<h2>About <span>HAQ INTERIO</span></h2>
+<p>Luxury-inspired interior spaces designed with elegance, comfort, and functionality.</p>
+</div>
+
+<div class="about-grid">
+<div class="about-image">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Luxury Interior">
+</div>
+
+<div class="about-content">
+<h3>Modern Interior Design Studio</h3>
+
+<p>
+HAQ INTERIO specializes in premium home and commercial interiors crafted with modern aesthetics, elegant detailing, and customer-focused design execution.
+</p>
+
+<p>
+From stylish homes to sophisticated commercial spaces, every project is completed with creativity, professionalism, and attention to quality.
+</p>
+
+<a href="#contact" class="btn btn-primary">Start Your Interior Project</a>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="section-title">
+<h2>Our <span>Services</span></h2>
+<p>Elegant interior solutions designed for modern lifestyles and premium spaces.</p>
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+<h3>Home Interiors</h3>
+<p>Modern luxury home interiors designed for elegance, comfort, and functionality.</p>
+</div>
+
+<div class="service-card">
+<h3>Commercial Interiors</h3>
+<p>Premium interiors for offices, shops, salons, and modern business spaces.</p>
+</div>
+
+<div class="service-card">
+<h3>Space Planning</h3>
+<p>Creative layouts and optimized planning for beautiful and efficient interiors.</p>
+</div>
+
+<div class="service-card">
+<h3>Affordable EMI Solutions</h3>
+<p>Luxury interior experiences made accessible through flexible EMI options.</p>
+</div>
+
+<div class="service-card">
+<h3>Furniture & Styling</h3>
+<p>Elegant custom furniture concepts and modern finishing details.</p>
+</div>
+
+<div class="service-card">
+<h3>Execution & Supervision</h3>
+<p>Professional project execution with clear communication and timely delivery.</p>
+</div>
+
+</div>
+</section>
+
+<section id="portfolio">
+<div class="section-title">
+<h2>Featured <span>Projects</span></h2>
+<p>Luxury-inspired interiors crafted with creativity and premium detailing.</p>
+</div>
+
+<div class="portfolio-grid">
+
+<div class="portfolio-card">
+<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop" alt="Luxury Home">
+<div class="portfolio-overlay">
+<h3>Modern Living Space</h3>
+<p>Elegant residential interiors with warm modern aesthetics.</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop" alt="Commercial Design">
+<div class="portfolio-overlay">
+<h3>Premium Commercial Design</h3>
+<p>Creative commercial interiors designed for modern businesses.</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1200&auto=format&fit=crop" alt="Office Interior">
+<div class="portfolio-overlay">
+<h3>Luxury Workspace Interior</h3>
+<p>Minimal sophisticated interiors with elegant finishing details.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="review-section" id="reviews">
+<div class="section-title">
+<h2>Client <span>Reviews</span></h2>
+<p>What clients say about HAQ INTERIO.</p>
+</div>
+
+<div class="review-grid">
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>
+Great interior designer work at affordable EMI scheme. Excellent experience and professional quality.
+</p>
+<h4>— Sameer Shaikh</h4>
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>
+Very good service, professional in work, and on-time delivery. Highly satisfied with the execution.
+</p>
+<h4>— Rahul Deshmukh</h4>
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>
+Elegant interiors, premium finishing, and excellent communication throughout the project.
+</p>
+<h4>— Happy Client</h4>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="cta">
+<h2>Transform Your Space With Modern Luxury Interiors.</h2>
+<p>
+We create beautiful spaces that combine comfort, elegance, premium aesthetics, and functional modern living.
+</p>
+<a href="#contact" class="btn btn-primary">Book Free Consultation</a>
+</div>
+</section>
+
+<section id="contact">
+<div class="section-title">
+<h2>Contact <span>HAQ INTERIO</span></h2>
+<p>Let’s design your dream interior space together.</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>Get In Touch</h3>
+<p><strong>Phone:</strong><br>077740 83599</p>
+<p><strong>Address:</strong><br>Shop no. 3, Aakruti Apartment, Pakhal Rd, General Arun Kumar Vaidya Nagar, Nashik, Maharashtra 422011</p>
+<p><strong>Business:</strong><br>Premium Interior Designer</p>
+<p><strong>Instagram:</strong><br>Available on Instagram</p>
+
+<a href="tel:+917774083599" class="btn btn-primary">Call Now</a>
+</div>
+
+<div class="contact-card contact-form">
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<input type="tel" placeholder="Phone Number">
+<textarea placeholder="Tell us about your interior project"></textarea>
+<button class="btn btn-primary">Send Inquiry</button>
+</form>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 HAQ INTERIO. Premium interiors crafted with elegance & precision.</p>
+</footer>
+
+<a href="https://wa.me/917774083599" class="whatsapp" target="_blank">✆</a>
+
+<script>
+window.addEventListener('scroll',()=>{
+const navbar=document.querySelector('.navbar');
+navbar.style.background=window.scrollY>50?'rgba(255,255,255,0.96)':'rgba(255,255,255,0.88)';
+});
+</script>
+
+</body>
+</html>
